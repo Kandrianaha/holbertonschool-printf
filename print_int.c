@@ -10,9 +10,14 @@
 
 void print_number(int n)
 {
+	int count;
+
+	count = 0;
+
 	if (n < 0)
 	{
 		_putchar ('-');
+		count++;
 		n = -n;
 	}
 
@@ -22,6 +27,7 @@ void print_number(int n)
 	}
 
 	_putchar((n % 10) + '0');
+	count++;
 }
 
 /**
@@ -35,6 +41,5 @@ int print_int(va_list args)
 	int num;
 
 	num = va_arg(args, int);
-	print_number(num);
-	return (1);
+	return (print_number(num));
 }
