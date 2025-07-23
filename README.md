@@ -11,6 +11,34 @@ This group project recreates the standard library's printf function. The followi
 | `d` | prints decimal numbers|
 | `i` | prints integers |
 
+## Requirements
+
+## Project files
+
+## Usage
+What it does
+
+#### Prototype
+#### Flowchart
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### Authors
 - [Ashleigh Henna](https://github.com/ashleigh6734)
 - [Karen Andrianaharison](https://github.com/Kandrianaha)
