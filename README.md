@@ -19,10 +19,14 @@ This group project recreates the standard library's printf function. The followi
 What it does
 
 ### Compilation
-```$ gcc -Wall -Werror -Wextra -pedantic *.c```
+```
+$ gcc -Wall -Werror -Wextra -pedantic *.c
+```
 
 ### Prototype
-```int _printf(const char *format, ...)```
+```
+int _printf(const char *format, ...)
+```
 
 ### Flowchart
 
