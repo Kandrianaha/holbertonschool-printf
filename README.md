@@ -18,8 +18,13 @@ This group project recreates the standard library's printf function. The followi
 ## Usage
 What it does
 
-#### Prototype
-#### Flowchart
+### Compilation
+```$ gcc -Wall -Werror -Wextra -pedantic *.c```
+
+### Prototype
+```int _printf(const char *format, ...)```
+
+### Flowchart
 
 
 
@@ -39,7 +44,7 @@ What it does
 
 
 
-### Authors
+## Authors
 - [Ashleigh Henna](https://github.com/ashleigh6734)
 - [Karen Andrianaharison](https://github.com/Kandrianaha)
 - [Tran Nguyen](https://github.com/tranbnn)
