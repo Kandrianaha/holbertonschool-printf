@@ -16,11 +16,13 @@ This group project recreates the standard library's printf function. The followi
 ## Project files
 | File | Description |
 |------|-------------|
-| `main.h` | A header file containing the prototypes and `typedef struct what_format` |
-| `get_form_func.c` | A function that determines which format specifier function to call |
-| `form_func.c` | A compilation of all functions needed for the conversion specifiers of `_printf` |
-| `_putchar.c` | A function that prints a char using `write` similar to standard library `putchar` |
-| `_printf.c` | A function that prints anything similar to standard library `printf` |
+| main.h | The header file: contains prototypes and structure of specifiers |
+| _printf.c| The project function: our recreation of the standard library `printf` |
+| _putchar.c|| Function file: similar to standard library's `putchar`
+| print_char.c||
+| print_int.c||
+| print_percent.c||
+| print_string.c|| 
 
 
 
