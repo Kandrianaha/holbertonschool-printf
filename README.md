@@ -11,6 +11,8 @@ This group project recreates the standard library's printf function. The followi
 | `d` | prints decimal numbers|
 | `i` | prints integers |
 
+
+
 ## Project files
 | File | Description |
 |------|-------------|
@@ -20,23 +22,27 @@ This group project recreates the standard library's printf function. The followi
 | `_putchar.c` | A function that prints a char using `write` similar to standard library `putchar` |
 | `_printf.c` | A function that prints anything similar to standard library `printf` |
 
+
+
 ## Usage
 * Prints a string to the standard output following a given format
 * Returns the number of characters in the output string upon success. Otherwise, the function will return -1.
-
 ```
 _printf("input");
 ```
+
 
 ### Prototype
 ```
 int _printf(const char *format, ...)
 ```
 
+
 ### Compilation
 ```
 $ gcc -Wall -Werror -Wextra -pedantic *.c
 ```
+
 
 ### Flowchart
 
