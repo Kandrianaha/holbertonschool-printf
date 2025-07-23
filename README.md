@@ -19,10 +19,10 @@ This group project recreates the standard library's printf function. The followi
 | main.h | The header file: contains prototypes and structure of specifiers |
 | _printf.c| The project function: our recreation of the standard library `printf` |
 | _putchar.c|| Function file: similar to standard library's `putchar`
-| print_char.c||
-| print_int.c||
-| print_percent.c||
-| print_string.c|| 
+| print_char.c| Function file: contains the function used to print characters|
+| print_int.c| Function file: contains the function used to print integers|
+| print_percent.c|Function file: contains the function used to print percent|
+| print_string.c|Function file: contains the function used to print strings| 
 
 
 
@@ -47,22 +47,12 @@ $ gcc -Wall -Werror -Wextra -pedantic *.c
 
 
 ### Flowchart
+![_printf-flowchart](./flowchart.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+### Manual page
+```
+man ./man_3_printf
+```  
 
 
 
