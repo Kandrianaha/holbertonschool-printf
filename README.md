@@ -1,5 +1,4 @@
 # _printf
-by Ashleigh Henna, Karen Andrianaharison, and Tran Nguyen
 
 ## About this project
 This group project recreates the standard library's printf function. The following conversion specifiers are used: 
@@ -11,3 +10,9 @@ This group project recreates the standard library's printf function. The followi
 | `%` | prints a percent on its own (not modifier) |
 | `d` | prints decimal numbers|
 | `i` | prints integers |
+
+### Authors
+- [Ashleigh Henna](https://github.com/ashleigh6734)
+- [Karen Andrianaharison](https://github.com/Kandrianaha)
+- [Tran Nguyen](https://github.com/tranbnn)
+
