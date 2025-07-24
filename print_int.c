@@ -21,7 +21,7 @@ void print_number(int n)
 		n = -n;
 	}
 
-	if (n /10)/* checks for more than one digit */
+	if (n / 10) /* checks for more than one digit */
 	{
 		print_number(n / 10);
 	}
