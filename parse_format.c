@@ -11,7 +11,7 @@
 int parse_format(const char *format, conver_t f_list[], va_list args)
 {
 	int i = 0, j, printed_chars = 0;
-	
+
 	while (format[i] != '\0')
 	{
 		if (format[i] == '%')
@@ -21,7 +21,7 @@ int parse_format(const char *format, conver_t f_list[], va_list args)
 		{
 			return (-1);
 		}
-		
+
 		for (j = 0; f_list[j].sym != NULL; j++)
 		{
 			if (format[i] == *(f_list[j].sym))
@@ -30,7 +30,7 @@ int parse_format(const char *format, conver_t f_list[], va_list args)
 				break;
 			}
 		}
-		
+
 		if (f_list[j].sym == NULL)
 		{
 			write(1, "%", 1);
@@ -43,7 +43,7 @@ int parse_format(const char *format, conver_t f_list[], va_list args)
 			write(1, &format[i], 1);
 			printed_chars++;
 		}
-		
+
 		i++;
 	}
 	return (printed_chars);

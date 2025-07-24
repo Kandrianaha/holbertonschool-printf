@@ -11,7 +11,7 @@ int _printf(const char *format, ...)
 {
 	va_list args;
 	int printed_chars;
-	
+
 	conver_t format_list[] = {
 		{"c", print_char},
 		{"s", print_string},
@@ -20,15 +20,15 @@ int _printf(const char *format, ...)
 		{"i", print_int},
 		{NULL, NULL}
 	};
-	
+
 	if (format == NULL)
 	{
 		return (-1);
 	}
-	
+
 	va_start(args, format);
 	printed_chars = parse_format(format, format_list, args);
 	va_end(args);
-	
+
 	return (printed_chars);
 }
