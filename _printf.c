@@ -3,29 +3,30 @@
 #include <unistd.h>
 
 /**
- * _printf - Custom printf implementation
- * @format: format string
- * Return: number of characters printed
+ * _printf - Produces output according to a format
+ * @format: Format string
+ * Return: Number of characters printed
  */
 int _printf(const char *format, ...)
 {
-	conver_t f_list[] = {
-		{"c", print_char},
-		{"s", print_string},
-		{"%", print_percent},
-		{"d", print_int},
-		{"i", print_int},
-		{NULL, NULL}
-	};
-	va_list arg_list; /* stores variable arguments */
-	int printed_chars; /* total num of chars printed */
+    va_list args;
+    int printed_chars;
 
-	if (format == NULL)
-		return (-1);
+    conver_t format_list[] = {
+        {"c", print_char},
+        {"s", print_string},
+        {"%", print_percent},
+	{"d", print_int},
+	{"i", print_int},
+        {NULL, NULL}
+    };
 
-	va_start(arg_list, format); /* initialise argument list */
-	printed_chars = parse_format(format, f_list, arg_list);
-	va_end(arg_list); /* clean up arg list */
+    if (format == NULL)
+        return (-1);
 
-	return (printed_chars);
+    va_start(args, format);
+    printed_chars = parse_format(format, format_list, args);
+    va_end(args);
+
+    return (printed_chars);
 }

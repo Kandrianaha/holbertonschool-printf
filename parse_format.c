@@ -1,51 +1,50 @@
 #include "main.h"
-#include <stdarg.h>
 #include <unistd.h>
 
 /**
- * parse_format - idk yet!!!
- * @s
- * Return: something
+ * parse_format - Parses format string and handles format specifiers
+ * @format: The format string
+ * @f_list: Array of format handlers
+ * @args: Arguments to print
+ * Return: Number of characters printed
  */
-
 int parse_format(const char *format, conver_t f_list[], va_list args)
 {
-	int i = 0;
-	int j;
-	int printed_chars = 0;
+    int i = 0, j, printed_chars = 0;
 
-	while (format[i] != '\0')
-	{
-		if (format[i] == '%')
-		{
-			i++;
-			if (format[i] == '\0')
-				break;
-		}
+    while (format[i] != '\0')
+    {
+        if (format[i] == '%')
+        {
+            i++;
+            if (format[i] == '\0')
+                break;
 
-		for (j = 0; f_list[j].sym != NULL; j++)
-		{
-			if (format[i] == *(f_list[j].sym))
-			{
-				printed_chars += f_list[j].handler(args);
-				break;
-			}
-		}
+            for (j = 0; f_list[j].sym != NULL; j++)
+            {
+                if (format[i] == *(f_list[j].sym))
+                {
+                    printed_chars += f_list[j].handler(args);
+                    break;
+                }
+            }
 
-		if (f_list[j].sym == NULL)
-		{
-			write(1, "%",1);
-			write(1, &format[i], 1);
-			printed_chars += 2;
-		}
-	else
-	{
-		write(1, &format[i], 1);
-		printed_chars++;
-	}
-	i++;
+            if (f_list[j].sym == NULL)
+            {
+                write(1, "%", 1);
+                write(1, &format[i], 1);
+                printed_chars += 2;
+            }
+        }
+        else
+        {
+            write(1, &format[i], 1);
+            printed_chars++;
+        }
 
-	}
+        i++;
+    }
 
-	return (printed_chars);
+    return (printed_chars);
 }
+

@@ -2,14 +2,13 @@
 #include <unistd.h>
 
 /**
- * print_percent - prints a percent sign
- * @args: va_list 
- * Return: Number of characters printed
+ * print_percent - Prints a percent sign
+ * @args: (unused)
+ * Return: 1
  */
 int print_percent(va_list args)
 {
-	(void)args;
-
-	write(1, "%", 1);
-	return (1);
+    (void)args;
+    return (write(1, "%", 1));
 }
+
