@@ -3,7 +3,7 @@
 #include <stdarg.h>
 
 /**
- * print_num - prints int number
+ * print_number - prints int number
  * @n: the int number
  * Return: int
  */
