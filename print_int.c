@@ -21,7 +21,7 @@ void print_number(int n)
 		n = -n;
 	}
 
-	if (n /10) /* checks for more than one digit */
+	if (n /10)/* checks for more than one digit */
 	{
 		print_number(n / 10);
 	}
@@ -42,5 +42,5 @@ int print_int(va_list args)
 
 	num = va_arg(args, int);
 	print_number(num);
-	return (1);	
+	return (1);
 }
