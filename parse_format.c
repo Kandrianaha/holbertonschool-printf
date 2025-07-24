@@ -18,14 +18,14 @@ int parse_format(const char *format, conver_t f_list[], va_list args)
         {
             i++;
             if (format[i] == '\0')
-                break;
+                return (-1);
 
             for (j = 0; f_list[j].sym != NULL; j++)
             {
                 if (format[i] == *(f_list[j].sym))
                 {
                     printed_chars += f_list[j].handler(args);
-                    break;
+                    return (-1);
                 }
             }
 
