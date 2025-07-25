@@ -1,6 +1,7 @@
 #include "main.h"
 #include <unistd.h>
 #include <stdarg.h>
+#include <limits.h>
 
 /**
  * print_number - prints int number
@@ -13,6 +14,14 @@ int print_number(int n)
 	int count;
 
 	count = 0;
+
+	if (n == INT_MIN)
+	{
+		count += _putchar('-');
+		count += _putchar('2');
+		count += print_number(147483648);
+		return count;
+	}
 
 	if (n < 0)
 	{
